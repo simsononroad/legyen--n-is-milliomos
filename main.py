@@ -1,15 +1,20 @@
 from time import sleep as wait
 from os import system as cmd
 from kerdesek import *
+import webbrowser
+url = "https://www.google.com"
 fix_penz = 0
 penz = 0
+
+telfon = True
+Kozonseg = False
 
 def k0(kerdes):
     global penz, fix_penz
     q0(kerdes[0])
     startq = input("             ")
     if startq == kerdes[1]:
-        penz += kerdes[2]
+        penz = kerdes[2]
     elif startq == "s":
         print(f"Kiszálltál! A nyereményed: {penz}Ft")
         re = input(f"Szeretnéd újrakezdeni? igen(a) || nem(b):  ")
